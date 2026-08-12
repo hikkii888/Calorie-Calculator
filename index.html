@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calorie Tracker — Daily Ledger</title>
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow">EST. TODAY · NO REFUNDS ON EATEN CALORIES</p>
+    <h1>Calorie Tracker</h1>
+    <p class="tagline">Ring up what you eat. Read it back like a receipt.</p>
+    <p class="today" id="todayDate"></p>
+  </header>
+
+  <main class="board">
+
+    <!-- Order pad: input form -->
+    <section class="pad" aria-label="Add a food item">
+      <h2 class="pad-title">Order Pad</h2>
+      <form id="addForm" novalidate>
+        <label class="field">
+          <span>Item</span>
+          <input type="text" id="foodName" placeholder="e.g. Chicken adobo" autocomplete="off">
+        </label>
+        <label class="field">
+          <span>Calories</span>
+          <input type="number" id="foodCalories" placeholder="e.g. 350" min="1" inputmode="numeric">
+        </label>
+        <label class="field">
+          <span>Category</span>
+          <select id="foodCategory">
+            <option>Breakfast</option>
+            <option>Lunch</option>
+            <option>Dinner</option>
+            <option>Snack</option>
+          </select>
+        </label>
+        <button type="submit" class="ring-up">Ring it up</button>
+        <p class="field-error" id="formError" role="alert"></p>
+      </form>
+
+      <div class="goal-field">
+        <label for="dailyGoal">Daily goal (kcal)</label>
+        <input type="number" id="dailyGoal" min="1" placeholder="e.g. 2000">
+      </div>
+    </section>
+
+    <!-- Receipt: itemized list -->
+    <section class="receipt-wrap" aria-label="Itemized list">
+      <div class="receipt" id="receipt">
+        <p class="receipt-line receipt-head">ITEM · CAT · KCAL</p>
+        <ol class="receipt-items" id="receiptItems">
+          <!-- rows injected here -->
+        </ol>
+        <p class="receipt-empty" id="receiptEmpty">Nothing rung up yet.<br>Add your first item on the order pad.</p>
+        <div class="receipt-total-row">
+          <span>TOTAL</span>
+          <span id="receiptTotal">0</span>
+        </div>
+        <p class="receipt-footer">THANK YOU FOR TRACKING</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Nutrition Facts style dashboard -->
+  <section class="facts" aria-label="Daily dashboard">
+    <h2 class="facts-title">Nutrition Facts</h2>
+    <p class="facts-sub">Daily Ledger</p>
+    <div class="facts-rule thick"></div>
+
+    <div class="facts-headline">
+      <span>Calories Today</span>
+      <span id="factsTotalCalories">0</span>
+    </div>
+    <div class="facts-rule thick"></div>
+
+    <div class="facts-goal-row" id="factsGoalRow">
+      <span>Daily Goal</span>
+      <span id="factsGoalValue">— not set —</span>
+    </div>
+    <div class="facts-rule thin"></div>
+
+    <div class="facts-col-labels">
+      <span>Category</span>
+      <span>Kcal</span>
+      <span>% of Total</span>
+    </div>
+    <div class="facts-rule thin"></div>
+
+    <div class="facts-rows" id="factsRows">
+      <!-- rows injected here -->
+    </div>
+    <div class="facts-rule thick"></div>
+
+    <p class="facts-note" id="factsNote">* % of Total shows each category's share of today's calories.</p>
+  </section>
+
+  <footer class="site-footer">
+    <p>Built with vanilla HTML/CSS/JS · data stays on this device · <a href="https://github.com/" id="repoLink" target="_blank" rel="noopener">source on GitHub</a></p>
+  </footer>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
