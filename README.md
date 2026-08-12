@@ -26,15 +26,6 @@ Both versions share the same food-tracking model: an abstract `FoodItem` with `B
 - **Java version only:** save/load your log as a CSV file
 - **Web version only:** your log is saved automatically in the browser (`localStorage`) — nothing is sent anywhere
 
-## Deploying the web demo
-
-1. Push this repo to GitHub.
-2. Go to **Settings → Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**.
-4. Pick your default branch (e.g. `main`) and the **`/docs`** folder, then **Save**.
-5. GitHub gives you a URL like `https://YOUR-USERNAME.github.io/YOUR-REPO/` within a minute or two — drop that into the top of this README and into your GitHub profile.
-
-No build step, no dependencies — it's static HTML/CSS/JS.
 
 ## Running the Java app locally
 
