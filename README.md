@@ -2,10 +2,7 @@
 
 A calorie tracker built two ways: a **Java Swing desktop app** (with a live dashboard, daily goal tracking, and CSV save/load) and a **web version** you can open instantly in any browser — styled like a grocery receipt and an FDA nutrition label.
 
-**[▶ Open the live demo](https://YOUR-USERNAME.github.io/YOUR-REPO/)** — no install needed.
-
-*(Replace the link above with your GitHub Pages URL — see [Deploying the web demo](#deploying-the-web-demo) below.)*
-
+**https://hikkii888.github.io/Calorie-Calculator/** — no install needed.
 ---
 
 ## What's in here
