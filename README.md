@@ -1,4 +1,4 @@
-# 🧾 Calorie Tracker
+# 🧾 Calorie Tracker!!
 
 A calorie tracker built two ways: a **Java Swing desktop app** (with a live dashboard, daily goal tracking, and CSV save/load) and a **web version** you can open instantly in any browser — styled like a grocery receipt and an FDA nutrition label.
 
